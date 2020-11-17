@@ -6,8 +6,8 @@ export default function Galery() {
   return (
     <div style={{ color: `red` }}>
       <Container>
-        <Header str="Galery" />
         <Link to="/">home</Link>
+        <Header str="Galery" />
         <p>Selected artwork</p>
       </Container>
 

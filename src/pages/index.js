@@ -10,6 +10,7 @@ export default function Home() {
       <Link to="/about/"> about</Link>
       <Link to="/galery/"> galery</Link>
       <Link to="/image_query/"> image query</Link>
+      <Link to="/image_fluid/"> image fluid</Link>
     </div>
   )
 }
