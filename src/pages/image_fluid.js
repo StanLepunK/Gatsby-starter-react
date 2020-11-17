@@ -39,8 +39,9 @@ export default function Image({ data }) {
     },
   ]
   return (
-    <Layout>
+    <div>
+      <Layout title="IMAGE FLUID"></Layout>
       <Img fluid={sources} />
-    </Layout>
+    </div>
   )
 }

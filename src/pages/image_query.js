@@ -17,12 +17,13 @@ export const query = graphql`
 
 export default function Image({ data }) {
   return (
-    <Layout>
+    <div>
+      <Layout title="IMAGE QUERY"></Layout>
       <Img
         className="my_image"
         fixed={data.file.childImageSharp.fixed}
         alt="my_image"
       />
-    </Layout>
+    </div>
   )
 }

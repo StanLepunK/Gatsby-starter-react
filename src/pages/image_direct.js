@@ -1,16 +1,12 @@
 import React from "react"
-import { Link } from "gatsby"
-import Header from "../components/header"
-import Container from "../components/container"
+// import { Link } from "gatsby"
+// import Header from "../components/header"
+// import Container from "../components/container"
+import Layout from "../components/layout"
 export default function Galery() {
   return (
     <div style={{ color: `red` }}>
-      <Container>
-        <Link to="/">home</Link>
-        <Header str="Galery" />
-        <p>Selected artwork</p>
-      </Container>
-
+      <Layout title="IMAGE DIRECT"></Layout>
       <img
         src="https://raw.githubusercontent.com/StanLepunK/git_media_src/main/knupel_72dpi/AttGen_13_60_75p5_CGTG_AA_72.jpg?token=AAZNRLPQF4UYHS26EU5FJYC7W7LDA"
         alt="CGTG_AA"

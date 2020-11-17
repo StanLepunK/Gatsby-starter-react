@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import Layout from "../components/layout"
 import Header from "../components/header"
 import styles from "../styles/about-css-modules.module.css"
 import Container from "../components/container"
@@ -18,8 +18,8 @@ const User = props => (
 export default function About() {
   return (
     <div style={{ color: `red` }}>
+      <Layout title="ABOUT"></Layout>
       <Container>
-        <Link to="/">home</Link>
         <User
           username="Stanislas Marçais"
           avatar="https://raw.githubusercontent.com/StanLepunK/git_media_src/main/profil/knupel_2020_11_13_200x200px.jpg?token=AAZNRLICDB5JNOGGFSNXLWK7W7W5O"
