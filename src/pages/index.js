@@ -11,6 +11,7 @@ export default function Home() {
       <Link to="/image_direct/"> image direct</Link>
       <Link to="/image_query/"> image query</Link>
       <Link to="/image_fluid/"> image fluid</Link>
+      <Link to="/image_multi_0/"> image multi 0</Link>
     </div>
   )
 }
