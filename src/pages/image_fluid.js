@@ -5,14 +5,25 @@ import { graphql } from "gatsby"
 
 export const query = graphql`
   query {
-    file(
+    mobileImage: file(
       relativePath: {
         eq: "knupel_72dpi/Boxon_1_0_2015_11_450x300_72_dpi_Stan_le_Punk.jpg"
       }
     ) {
       childImageSharp {
-        fixed(width: 200, height: 200) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1000, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    desktopImage: file(
+      relativePath: {
+        eq: "knupel_72dpi/Boxon_1_0_2015_11_450x300_72_dpi_Stan_le_Punk.jpg"
+      }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 2000, quality: 100) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -20,13 +31,16 @@ export const query = graphql`
 `
 
 export default function Image({ data }) {
+  const sources = [
+    data.mobileImage.childImageSharp.fluid,
+    {
+      ...data.desktopImage.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    },
+  ]
   return (
     <Layout>
-      <Img
-        className="my_image"
-        fixed={data.file.childImageSharp.fixed}
-        alt="my_image"
-      />
+      <Img fluid={sources} />
     </Layout>
   )
 }
